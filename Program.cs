@@ -17,9 +17,10 @@ var sortList = new List<ISort>()
 };
 
 var random = new Random().Next(0, sortList.Count);
-ISort randomSorted = sortList[random];
-
 var randomArray = new RandomArray().GetArray();
+
+await Console.Out.WriteLineAsync($"No Sort Array:{string.Join(",", randomArray)}");
+
 var sortRandom = sortList[random];
 
 var sorting = sortRandom.Sort(ref randomArray);
